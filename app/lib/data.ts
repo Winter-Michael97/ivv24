@@ -1,7 +1,6 @@
 'use server';
 
 import { sql } from '@vercel/postgres';
-import {text} from "node:stream/consumers";
 
 const connectionString = process.env.POSTGRES_URL;
 
