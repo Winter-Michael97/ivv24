@@ -17,10 +17,13 @@ export default function EUI() {
             localStorage.setItem("UserGroup", userGroup.toString());
 
             // Weiterleitung zur richtigen Gruppe und Frage
+            // Mit Biasscanner
             if (userGroup === 0) {
                 router.push('/AT/BS/Q1'); // Weiterleitung zu BS
+                // Mit Definitionen
             } else if (userGroup === 1) {
                 router.push('/AT/DH/Q1'); // Weiterleitung zu DH
+                // Ohne Hilfestellungen
             } else if (userGroup === 2) {
                 router.push('/AT/KH/Q1'); // Weiterleitung zu KH
             }
