@@ -70,7 +70,6 @@ export default function Q1() {
         article12: null,
         article13: null,
         article14: null,
-        article15: null
     });
 
     // 🔹 Bias-Änderung erfassen
