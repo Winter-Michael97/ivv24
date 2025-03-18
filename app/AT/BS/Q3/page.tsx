@@ -108,7 +108,7 @@ export default function Q1() {
                     await saveAnswer(userId, userGroup, text, biasValue);
                 }
             }
-            router.push('./Q4'); // 🔹 Weiterleitung nach Speicherung
+            router.push('/Q4'); // 🔹 Weiterleitung nach Speicherung
         } catch (error) {
             console.error('Fehler beim Speichern:', error);
         }
