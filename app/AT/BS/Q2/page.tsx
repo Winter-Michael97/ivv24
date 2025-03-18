@@ -112,11 +112,12 @@ export default function Q1() {
             for (const [articleId, biasValue] of Object.entries(biasAnswers)) {
                 if (biasValue !== null) {
                     // eslint-disable-next-line @typescript-eslint/no-unused-vars
-                    const { text, comment } = articleTexts[articleId]; // 🔹 Den Artikeltext und Kommentar holen
+                    const { text, comment } = articleTexts[articleId]; // 🔹 Den
+                    // text und Kommentar holen
                     await saveAnswer(userId, userGroup, text, biasValue);
                 }
             }
-            router.push('./Q2'); // 🔹 Weiterleitung nach Speicherung
+            router.push('./Q3'); // 🔹 Weiterleitung nach Speicherung
         } catch (error) {
             console.error('Fehler beim Speichern:', error);
         }
@@ -124,7 +125,7 @@ export default function Q1() {
 
     return (
         <div style={containerStyle}>
-            <h1 style={headStyle}>Artikel 1</h1>
+            <h1 style={headStyle}>Artikel 2</h1>
             <h2 style={headstyle_zwei}>Bitte geben Sie an, ob die folgenden Textausschnitte voreingenommen (Bias) sind
                 oder nicht.</h2>
             <h2 style={headstyle_zwei}>Unter den Artikeln finden sie Hilfestellung von der Webseite Biasscanner.org, das mithilfe von maschinellem Lernen Sätze in Nachrichtenartikeln identifiziert und hervorhebt, die potenziell voreingenommen sind. </h2>
