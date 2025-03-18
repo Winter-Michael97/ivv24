@@ -40,10 +40,6 @@ export default function Q1() {
         // Dieser Satz zeigt Intergruppen-Bias, indem er die AfD einseitig positiv darstellt und als einzige Partei, die auf das Volk hört, bezeichnet, während gegnerische Parteien abgewertet werden.
     };
 
-    const biasDefinitionen = [
-        { name: ""}
-    ]
-
     // 🔹 State für Bias-Antworten
     const [biasAnswers, setBiasAnswers] = useState<{ [key: string]: boolean | null }>({
         article1: null,
@@ -57,6 +53,7 @@ export default function Q1() {
         article9: null,
         article10: null
     });
+
 
     // 🔹 Bias-Änderung erfassen
     const handleBiasChange = (articleId: string, biasValue: boolean | null): void => {
@@ -99,10 +96,12 @@ export default function Q1() {
     };
 
     return (
+        <>
         <div style={containerStyle}>
             <h1 style={headStyle}>Artikel 1</h1>
             <h2 style={headstyle_zwei}>Bitte geben Sie an, ob die folgenden Textausschnitte voreingenommen (Bias) sind
                 oder nicht.</h2>
+            <h2 style={headstyle_zwei}>Auf der rechten Seite befindet sich mittig ein blauer Knopf mit einem Pfeil. Wenn Sie ihn drücken, öffnet sich eine Liste mit verschiedenen Bias-Definitionen, die Ihnen bei der Bewertung helfen.</h2>
 
             {/* 🔹 Bias-Selektoren für alle Artikel */}
             {Object.entries(articleTexts).map(([articleId, text]) => (
@@ -117,13 +116,134 @@ export default function Q1() {
                 * Das Laden der nächsten Seite kann einige Sekunden in Anspruch nehmen.
             </p>
         </div>
+    <BiasInfoBox/>
+        </>
     );
+
+
+    function BiasInfoBox() {
+        const [isOpen, setIsOpen] = useState(false);
+
+        const biasDefinitionen = [
+            {
+                name: "1.Wortwahl-Bias",
+                definition: "Eine bestimmte Wortwahl, die eine positive oder negative Wertung suggeriert, ohne dies explizit auszusprechen."
+            },
+            {
+                name: "2.Meinungsstarker-Bias",
+                definition: "Eine Darstellung, die durch subjektive Meinungen oder Wertungen anstelle von Fakten geprägt ist."
+            },
+            {
+                name: "3.Unklarer-Zuschreibungs-Bias",
+                definition: "Aussagen, die Behauptungen aufstellen, ohne eine klare Quelle oder Beweise zu nennen."
+            },
+            {
+                name: "4.Spekulations-Bias",
+                definition: "Eine Aussage, die eine Vermutung oder Spekulation als wahrscheinliche Wahrheit darstellt, ohne Beweise zu liefern."
+            },
+            {
+                name: "5.Ad-Hominem-Bias",
+                definition: "Ein Angriff auf die Person anstelle ihrer Argumente oder Positionen."
+            },
+            {
+                name: "6.Emotionaler-Sensationalsismus-Bias",
+                definition: "Eine übertrieben emotionale oder dramatische Darstellung, um eine bestimmte Reaktion hervorzurufen."
+            },
+            {
+                name: "7.Intergruppen-Bias",
+                definition: "Eine Darstellung, die die eigene Gruppe bevorzugt und andere Gruppen abwertet."
+            },
+            {
+                name: "8.Diskriminierungs-Bias",
+                definition: "Eine Darstellung, die eine Gruppe aufgrund von Merkmalen wie Herkunft, Geschlecht oder Religion benachteiligt oder herabwürdigt."
+            },
+            {
+                name: "9.Politischer-Bias",
+                definition: "Eine einseitige Darstellung zugunsten oder gegen eine bestimmte politische Richtung."
+            },
+            {
+                name: "10.Kausaler-Missverständnis-Bias",
+                definition: "Eine falsche Schlussfolgerung, die Kausalität (Ursache und Wirkung) suggeriert, obwohl nur eine Korrelation (wechselseitige Beziehung) besteht."
+            },
+            {
+                name: "11.Falsche-Dichtomie-Bias",
+                definition: "Eine künstliche Reduzierung einer Diskussion auf nur zwei Möglichkeiten, obwohl es mehrere Alternativen gibt."
+            },
+            {
+                name: "12.Unbegründete-Behauptungen-Bias:",
+                definition: "Aufstellung von Behauptungen ohne Beweise."
+            }
+        ];
+
+        return (
+            <div style={{
+                position: 'fixed', right: '0', top: '50%', transform: 'translateY(-50%)',
+                zIndex: 1000, display: 'flex', alignItems: 'center'
+            }}>
+                {/* Pfeil-Button bleibt immer sichtbar */}
+                <button
+                    onClick={() => setIsOpen(!isOpen)}
+                    style={{
+                        backgroundColor: '#3498db',
+                        color: '#fff',
+                        border: 'none',
+                        padding: '5px 10px',
+                        cursor: 'pointer',
+                        position: 'absolute',
+                        left: '-40px', // Bewegt den Pfeil nach links, außerhalb der Box
+                        top: '50%',
+                        transform: 'translateY(-50%)',
+                        borderRadius: '5px 0 0 5px',
+                        zIndex: 2000 // Stellt sicher, dass der Pfeil nicht verdeckt wird
+                    }}>
+                    {isOpen ? '⮜' : '⮞'}
+                </button>
+
+                {/* Sidebox mit scrollbar, wenn offen */}
+                <div style={{
+                    width: isOpen ? '300px' : '40px',
+                    height: '95vh',
+                    backgroundColor: isOpen ? '#2c3e50' : 'transparent',
+                    color: '#ecf0f1',
+                    padding: '10px',
+                    borderRadius: '10px 0 0 10px',
+                    transition: 'width 0.3s ease-in-out',
+                    overflow: 'hidden', // Verhindert, dass Text in geschlossenem Zustand sichtbar bleibt
+                    position: 'relative',
+                    boxShadow: isOpen ? 'rgba(0, 0, 0, 0.2) 0px 4px 8px' : 'none'
+                }}>
+                    {/* Scrollbarer Inhalt, wenn geöffnet */}
+                    <div style={{
+                        maxHeight: '100%',
+                        overflowY: isOpen ? 'auto' : 'hidden', // Scrollbar nur bei geöffnetem Zustand
+                        width: '100%',
+                        position: 'absolute',
+                        left: '0',
+                        top: '0',
+                        padding: '10px'
+                    }}>
+                        {isOpen && (
+                            <div>
+                                <h3 style={{fontSize: '18px', marginBottom: '10px'}}>Bias-Definitionen</h3>
+                                {biasDefinitionen.map((bias, index) => (
+                                    <div key={index} style={{marginBottom: '10px'}}>
+                                        <strong>{bias.name}:</strong>
+                                        <p style={{fontSize: '14px', marginTop: '5px'}}>{bias.definition}</p>
+                                    </div>
+                                ))}
+                            </div>
+                        )}
+                    </div>
+                </div>
+            </div>
+        );
+    }
 }
 
 // 🔹 Styles
 const containerStyle = {backgroundColor: '#708090', color: '#ffffff', padding: '30px'};
-const headStyle = {fontSize: '24px', textAlign: 'left' as const, marginBottom: '10px' };
+const headStyle = {fontSize: '24px', textAlign: 'left' as const, marginBottom: '10px'};
 const headstyle_zwei = {fontSize: '20px', textAlign: 'left' as const, marginBottom: '5px'};
-const rowStyle: CSSProperties = { display: 'flex', flexDirection: 'column', gap: '10px', marginBottom: '20px' };
-const paragraphStyle: CSSProperties = { marginBottom: '10px', marginTop: '10px', textAlign: 'left' as const };
-const buttonStyle: CSSProperties = { backgroundColor: '#32CD32', padding: '10px', border: 'none', cursor: 'pointer' };
+const rowStyle: CSSProperties = {display: 'flex', flexDirection: 'column', gap: '10px', marginBottom: '20px'};
+const paragraphStyle: CSSProperties = {marginBottom: '10px', marginTop: '10px', textAlign: 'left' as const};
+const buttonStyle: CSSProperties = {backgroundColor: '#32CD32', padding: '10px', border: 'none', cursor: 'pointer'};

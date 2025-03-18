@@ -42,12 +42,10 @@ export default function Q1() {
         // false
         article13: "13. Der NSU-Komplex, Mannheim, Magdeburg und nun auch wieder Solingen: Paradebeispiele dafür, wie rechtsextreme Gewalt, ja sogar Mord, in Deutschland strukturell und institutionell bagatellisiert, sogar ignoriert wird."
         //true, Diskriminierungs-Bias: 0.9
-        // Zusammenfassung:
         // In diesem Satz wird ein Diskriminierungs-Bias deutlich, da behauptet wird, dass rechtsextreme Gewalt in Deutschland strukturell und institutionell bagatellisiert oder ignoriert wird, was eine generalisierende und negative Darstellung der deutschen Gesellschaft impliziert.
+        // Zusammenfassung:
         // Der Artikel weist mehrere Formen von Nachrichtenbias auf, darunter Unklarer-Zuschreibungs-Bias, Kausaler-Missverständnis-Bias und Diskriminierungs-Bias, insbesondere im Zusammenhang mit der Untersuchung eines Brandanschlags in Solingen. Die Berichterstattung neigt dazu, politische Motive und strukturelle Probleme in der Behandlung rechtsextremer Gewalt zu betonen, was zu einer voreingenommenen Darstellung führt.
-        //
         // Percentage of biased sentences: 31
-        //
         // Most frequent bias: Unklarer-Zuschreibungs-Bias (4 Most frequent bias)
         // Average bias strength:: 0.77
         // Overall rating: 0.54
@@ -90,7 +88,7 @@ export default function Q1() {
 
         const userIdStr = localStorage.getItem("userId");
         const userId = userIdStr ? parseInt(userIdStr, 10) : null;
-        const userGroup = 0;
+        const userGroup = 2;
 
         if (!userId) {
             console.error("Kein User gefunden.");

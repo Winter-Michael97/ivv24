@@ -1,6 +1,7 @@
 'use client'
 import {useEffect, useState} from 'react';
 import { saveDemographics } from '../lib/data';
+import { useRouter } from 'next/navigation';
 
 
 export default function Home() {
@@ -29,6 +30,8 @@ export default function Home() {
     const [abschluss, setAbschluss] = useState('');
     const [beruf, setBeruf] = useState('');
 
+    const router = useRouter();
+
     // Erstmal zu Question_ohnequellen, brauche noch random gruppeneinteilung
     const handleSubmit = (e: { preventDefault: () => void; }) => {
         e.preventDefault();
@@ -38,7 +41,7 @@ export default function Home() {
             saveDemographics(userId, vorname, nachname, age, geschlecht, abschluss, beruf)
                 .then(() => {
                     localStorage.clear();
-                    alert('Vielen Dank für Ihre Teilnahme!');
+                    router.push('../END/');
                 })
                 .catch((error) => {
                     console.error('Fehler beim Speichern:', error);

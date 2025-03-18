@@ -5,7 +5,7 @@ import { useRouter } from 'next/navigation';
 import { saveAnswer } from "@/app/lib/data";
 import BiasSelector from "@/app/Hilfe/biasselector";
 
-export default function Q1() {
+export default function Q3() {
     const router = useRouter();
 
     // 🔹 Artikeltexte definieren
