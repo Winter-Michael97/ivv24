@@ -54,9 +54,6 @@ export default function DD() {
                     • Sie haben keinen direkten Nutzen durch die Studienteilnahme, unterstützen aber unsere Arbeit und
                     helfen die Forschung in diesem Bereich voranzubringen
                 </li>
-                <li>• Falls sie jedoch eingeschriebener Student an der Universität Regensburg sind, erhalten sie 0,5
-                    VP
-                </li>
                 <li>• Eine Untersuchung der Online-Studie dauert ungefähr 30 Minuten</li>
                 <li>
                     • Wir erfassen zur Analyse einige persönliche Daten (z. B. Alter, Gender, usw.)
