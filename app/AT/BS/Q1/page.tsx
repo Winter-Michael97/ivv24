@@ -113,7 +113,7 @@ export default function Q1() {
             <h1 style={headStyle}>Artikel 1</h1>
             <h2 style={headstyle_zwei}>Bitte geben Sie an, ob die folgenden Textausschnitte voreingenommen (Bias) sind
                 oder nicht.</h2>
-            <h2 style={headstyle_zwei}>Unter den Artikeln finden Sie Unterstützung von Biasscanner.org – einer Webseite,
+            <h2 style={headstyle_zwei}>Unter den jeweiligen Artikelabschnitt finden Sie Unterstützung von Biasscanner.org – einer Webseite,
                 die mithilfe von maschinellem Lernen potenziell voreingenommene Sätze in Nachrichtenartikeln erkennt und
                 hervorhebt. Falls ein Bias identifiziert wurde, sind die Art der Voreingenommenheit, deren Stärke und
                 eine entsprechende Definition beim jeweiligen Artikelabschnitt hinterlegt.</h2>
