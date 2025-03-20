@@ -101,7 +101,7 @@ export default function Q1() {
             <h1 style={headStyle}>Artikel 1</h1>
             <h2 style={headstyle_zwei}>Bitte geben Sie an, ob die folgenden Textausschnitte voreingenommen (Bias) sind
                 oder nicht.</h2>
-            <h2 style={headstyle_zwei}>Auf der rechten Seite befindet sich mittig ein blauer Knopf mit einem Pfeil. Wenn Sie ihn drücken, öffnet sich eine Liste mit verschiedenen Bias-Definitionen, die Ihnen bei der Bewertung helfen.</h2>
+            <h2 style={headstyle_zwei}>Auf der rechten Seite befindet sich mittig ein blauer Knopf mit einem Pfeil. Wenn Sie ihn drücken, öffnet sich eine Liste mit verschiedenen Bias-Definitionen, die Ihnen bei der Bewertung helfen könnten.</h2>
 
             {/* 🔹 Bias-Selektoren für alle Artikel */}
             {Object.entries(articleTexts).map(([articleId, text]) => (
@@ -176,74 +176,70 @@ export default function Q1() {
         ];
 
         return (
-            <div style={{
-                position: 'fixed', right: '0', top: '50%', transform: 'translateY(-50%)',
-                zIndex: 1000, display: 'flex', alignItems: 'center'
-            }}>
-                {/* Pfeil-Button bleibt immer sichtbar */}
+            <div style={{ position: 'fixed', right: '0', top: '50%', transform: 'translateY(-50%)', zIndex: 1000 }}>
                 <button
                     onClick={() => setIsOpen(!isOpen)}
                     style={{
-                        backgroundColor: '#3498db',
-                        color: '#fff',
+                        backgroundColor: '#FFD700',
+                        color: '#000',
                         border: 'none',
-                        padding: '5px 10px',
+                        padding: '10px 15px',
                         cursor: 'pointer',
                         position: 'absolute',
-                        left: '-40px', // Bewegt den Pfeil nach links, außerhalb der Box
+                        left: '-50px',
                         top: '50%',
                         transform: 'translateY(-50%)',
-                        borderRadius: '5px 0 0 5px',
-                        zIndex: 2000 // Stellt sicher, dass der Pfeil nicht verdeckt wird
-                    }}>
+                        borderRadius: '10px 0 0 10px',
+                        zIndex: 2000,
+                        fontSize: '16px',
+                        fontWeight: 'bold',
+                        transition: 'background-color 0.3s ease, transform 0.2s ease',
+                    }}
+                    onMouseOver={(e) => (e.currentTarget.style.backgroundColor = '#FFA500')}
+                    onMouseOut={(e) => (e.currentTarget.style.backgroundColor = '#FFD700')}
+                >
                     {isOpen ? '⮜' : '⮞'}
                 </button>
 
-                {/* Sidebox mit scrollbar, wenn offen */}
-                <div style={{
-                    width: isOpen ? '300px' : '40px',
-                    height: '95vh',
-                    backgroundColor: isOpen ? '#2c3e50' : 'transparent',
-                    color: '#ecf0f1',
-                    padding: '10px',
-                    borderRadius: '10px 0 0 10px',
-                    transition: 'width 0.3s ease-in-out',
-                    overflow: 'hidden', // Verhindert, dass Text in geschlossenem Zustand sichtbar bleibt
-                    position: 'relative',
-                    boxShadow: isOpen ? 'rgba(0, 0, 0, 0.2) 0px 4px 8px' : 'none'
-                }}>
-                    {/* Scrollbarer Inhalt, wenn geöffnet */}
+                {isOpen && (
                     <div style={{
-                        maxHeight: '100%',
-                        overflowY: isOpen ? 'auto' : 'hidden', // Scrollbar nur bei geöffnetem Zustand
-                        width: '100%',
-                        position: 'absolute',
-                        left: '0',
-                        top: '0',
-                        padding: '10px'
+                        width: '300px',
+                        height: '95vh',
+                        backgroundColor: '#2c3e50',
+                        color: '#ecf0f1',
+                        padding: '10px',
+                        borderRadius: '10px 0 0 10px',
+                        overflowY: 'auto',
+                        position: 'relative',
+                        boxShadow: 'rgba(0, 0, 0, 0.2) 0px 4px 8px'
                     }}>
-                        {isOpen && (
-                            <div>
-                                <h3 style={{fontSize: '18px', marginBottom: '10px'}}>Bias-Definitionen</h3>
-                                {biasDefinitionen.map((bias, index) => (
-                                    <div key={index} style={{marginBottom: '10px'}}>
-                                        <strong>{bias.name}:</strong>
-                                        <p style={{fontSize: '14px', marginTop: '5px'}}>{bias.definition}</p>
-                                    </div>
-                                ))}
+                        <h3 style={{ fontSize: '18px', marginBottom: '10px' }}>Bias-Definitionen</h3>
+                        {biasDefinitionen.map((bias, index) => (
+                            <div key={index} style={{ marginBottom: '10px' }}>
+                                <strong>{bias.name}:</strong>
+                                <p style={{ fontSize: '14px', marginTop: '5px' }}>{bias.definition}</p>
                             </div>
-                        )}
+                        ))}
+                        <p style={{
+                            fontSize: '14px',
+                            color: '#FFD700',
+                            textAlign: 'center',
+                            marginTop: '10px',
+                            fontWeight: 'bold',
+                        }}>
+                            🔹 Diese Liste enthält Definitionen der verschiedenen Bias-Arten, um Ihnen bei der Bewertung zu helfen.
+                        </p>
                     </div>
-                </div>
+                )}
             </div>
         );
     }
 }
 
-// 🔹 Styles
-const containerStyle = {backgroundColor: '#708090', color: '#ffffff', padding: '30px'};
-const headStyle = {fontSize: '24px', textAlign: 'left' as const, marginBottom: '10px'};
-const headstyle_zwei = {fontSize: '20px', textAlign: 'left' as const, marginBottom: '5px'};
-const rowStyle: CSSProperties = {display: 'flex', flexDirection: 'column', gap: '10px', marginBottom: '20px'};
-const paragraphStyle: CSSProperties = {marginBottom: '10px', marginTop: '10px', textAlign: 'left' as const};
-const buttonStyle: CSSProperties = {backgroundColor: '#32CD32', padding: '10px', border: 'none', cursor: 'pointer'};
+// Styles
+const containerStyle = { backgroundColor: '#708090', color: '#ffffff', padding: '30px' };
+const headStyle: CSSProperties = { fontSize: '24px', textAlign: 'left', marginBottom: '10px' };
+const headstyle_zwei: CSSProperties = { fontSize: '20px', textAlign: 'left', marginBottom: '5px' };
+const rowStyle: CSSProperties = { display: 'flex', flexDirection: 'column', gap: '10px', marginBottom: '20px' };
+const paragraphStyle: CSSProperties = { marginBottom: '10px', marginTop: '10px', textAlign: 'left' };
+const buttonStyle: CSSProperties = { backgroundColor: '#32CD32', padding: '10px', border: 'none', cursor: 'pointer' };
