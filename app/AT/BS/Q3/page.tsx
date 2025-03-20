@@ -13,7 +13,7 @@ export default function Q1() {
     const articleTexts: { [key: string]: { text: string, comment: string } } = {
         article1: {
             text: "1. Das Sondierungspapier der möglichen neuen Großen Koalition stößt bei den Grünen auf scharfe Kritik.",
-            comment: ""
+            comment: "Kein Bias erkannt"
         },
         article2: {
             text: "2. Das könnte für Union und SPD heikel werden, weil es auch an den Grünen hängt, ob sie ihre Investitionsvorhaben noch durch den alten Bundestag bekommen.",
@@ -25,11 +25,11 @@ export default function Q1() {
         },
         article4: {
             text: "4. Union und SPD dürften bei der Verabschiedung ihres bereits vor einigen Tagen vereinbarten Sicherheitspakets auf die Stimmen der Grünen angewiesen sein. Sie hatten vereinbart, die Schuldenbremse für höhere Verteidigungsausgaben zu lockern und ein schuldenfinanziertes Sondervermögen von 500 Milliarden Euro für die Infrastruktur zu schaffen. Die Änderungen, für die eine Zwei-Drittel-Mehrheit nötig ist, sollen noch vom bestehenden Bundestag beschlossen werden – im nächsten Bundestag wird es wegen neuer Mehrheiten deutlich schwieriger.",
-            comment: ""
+            comment: "Kein Bias erkannt"
         },
         article5: {
             text: "5. Konkret werfen die Grünen Union und SPD vor, ihre Wahlversprechen durch diese neuen Finanzmittel finanzieren zu wollen, statt das Geld für tatsächliche Verbesserungen einzusetzen. „Wir sehen, dass es offensichtlich 500 Milliarden Euro nicht für zusätzliche Infrastrukturprojekte geben soll, sondern für Wahlversprechen, Mütterrente, Pendlerpauschale“, sagte Brantner. Banaszak sagte, Schwarz-Rot nutze die schwierige Lage mit Blick auf Russland und die USA, „um am Ende einfach nur die Gastronomie von der Mehrwertsteuer zu befreien oder eine weitere Stufe der Mütterrente einzuführen“.",
-            comment: ""
+            comment: "Kein Bias erkannt"
         },
         article6: {
             text: "6. Es sei bedrückend, dass Klimaschutz keine Rolle spiele, sagte Banaszak. „Die ökologischen Krisen unserer Zeit, ihre Tiefe, ihre Brutalität und die Notwendigkeit der Bewältigung dieser Krisen ist offensichtlich kein Thema für die sich bildende Koalition.“",
@@ -37,7 +37,7 @@ export default function Q1() {
         },
         article7: {
             text: "7. Die Aussagen zur Sozialpolitik seien enttäuschend. Die Union habe einen „Frontalangriff aufs Bürgergeld“ durchgesetzt. Zudem fehlten Aussagen zur inneren Sicherheit.",
-            comment: ""
+            comment: "Kein Bias erkannt"
         },
         article8: {
             text: "8. Die Grünen-Chefs bemängelten, dass Union und SPD ihre Pläne nicht mit den Grünen abgestimmt hätten, obwohl deren Zustimmung nötig sei für das Finanzpaket. „Stil ist in der Politik nicht zu unterschätzen. Friedrich Merz hat da noch sehr viel Luft nach oben“, sagte Banaszak.",
@@ -49,11 +49,11 @@ export default function Q1() {
         },
         article10: {
             text: "10. Aus den Reihen der möglichen zukünftigen Koalitionspartner hingegen klingen die Reaktionen erwartungsgemäß anders. Die Sondierungsgespräche haben laut Sachsens Ministerpräsident Michael Kretschmer die Weichen für einen Politikwechsel gestellt. „Vom ersten Tag der neuen Regierung an wird man die Veränderungen in der Migrationspolitik an den Grenzen und auch bei den Asylentscheidungen spüren“, erklärte der CDU-Politiker.",
-            comment: ""
+            comment: "Kein Bias erkannt"
         },
         article11: {
             text: "11. Ziel sei zudem, die Wettbewerbsfähigkeit Deutschlands zu erhöhen. Dazu sollen die Strompreise sinken. Auch werde es umfangreiche Änderungen beim Bürgergeld geben und die Verkehrswege sollen zwischen Deutschland und den östlichen Nachbarn Polen und Tschechien ausgebaut werden.",
-            comment: ""
+            comment: "Kein Bias erkannt"
         }
     }
 

@@ -13,7 +13,7 @@ export default function Q1() {
     const articleTexts: { [key: string]: { text: string, comment: string } } = {
         article1: {
             text: "1. Auf Elon Musk kann sich die AfD verlassen: Nach seinem Gespräch mit Parteichefin Weidel auf seiner Plattform X hat sich der Tech-Milliardär nun auch live zum Wahlkampfauftakt der Partei dazugeschaltet. Wenige Wochen vor der Bundestagswahl mischt Tech-Milliardär Elon Musk erneut im deutschen Wahlkampf mit. Bei einem Gastauftritt auf einer Wahlkampfveranstaltung der AfD bekräftigte Musk seine Unterstützung für die Partei. Zu Beginn der Rede von AfD-Chefin Alice Weidel wurde der Trump-Berater und Tesla-Chef live aus den USA zugeschaltet.",
-            comment: "" // Kein Bias-Kommentar für diesen Artikel
+            comment: "Kein Bias erkannt" // Kein Bias-Kommentar für diesen Artikel
         },
         article2: {
             text: "2. Die AfD sei die beste Hoffnung für Deutschland, sagte er. \"Kämpft für eine großartige Zukunft für Deutschland\", sagte Musk unter dem Jubel der nach Parteiangaben etwa 4.500 AfD-Anhänger in der Messe in Halle (Saale).",
@@ -21,7 +21,7 @@ export default function Q1() {
         },
         article3: {
             text: "3. AfD hat Musks volle Unterstützung - Der Unternehmer beklagte zudem, es gebe \"zu viel Fokus auf vergangener Schuld\", man müsse das hinter sich lassen. Kinder sollten nicht schuldig für die Sünden ihrer Urgroßeltern sein, sagte er und rief zu Optimismus auf. \"Es ist sehr wichtig, dass die Menschen in Deutschland stolz darauf sind, Deutsche zu sein\", so Musk.",
-            comment: "" // Kein Bias-Kommentar für diesen Artikel
+            comment: "Kein Bias erkannt" // Kein Bias-Kommentar für diesen Artikel
         },
         article4: {
             text: "4. Die AfD habe seine volle Unterstützung und - so glaube er - auch die Unterstützung der Trump-Regierung.",
@@ -29,7 +29,7 @@ export default function Q1() {
         },
         article5: {
             text: "5. Weidel bedankte sich mit besten Wünschen für die US-Regierung unter Präsident Donald Trump und dessen Wahlspruch \"Make America great again\". Sie fügte später ein \"Make Germany great again\" hinzu. Es ist nicht das erste Mal, dass Musk seine Unterstützung für die AfD öffentlich bekundet. Im Dezember hatte er mit Weidel ein Live-Gespräch auf seiner Plattform X geführt. Kritiker werfen ihm vor, mit Hilfe seiner enormen Reichweite den Ausgang der Bundestagswahl beeinflussen zu wollen.",
-            comment: "" // Kein Bias-Kommentar für diesen Artikel
+            comment: "Kein Bias erkannt" // Kein Bias-Kommentar für diesen Artikel
         },
         article6: {
             text: "6. Weidel: Wähler wollen Blau-Schwarz. Weidel kritisierte in ihrer Rede die aktuelle Migrations-, Wirtschafts- und Energiepolitik. Mit Blick auf die aktuelle Debatte nach dem Angriff in Aschaffenburg, sagte die AfD-Parteichefin: \"Liebe CDU, reißt die undemokratischen Brandmauern ein. Der Wähler will eine blau-schwarze Koalition in der Bundesrepublik Deutschland.\".",
@@ -37,7 +37,7 @@ export default function Q1() {
         },
         article7: {
             text: "7. Außerdem machte sie großzügige Ankündigungen: Man werde im Falle eines Wahlsiegs unter anderem die Unternehmenssteuer, die Einkommens-, die Konsum-, Strom- und Energiekosten senken.",
-            comment: "" // Kein Bias-Kommentar für diesen Artikel
+            comment: "Kein Bias erkannt" // Kein Bias-Kommentar für diesen Artikel
         },
         article8: {
             text: "8. Die Berechnungen des Deutschen Instituts für Wirtschaftsforschung (DIW), dass dadurch Haushaltslöcher in Höhe von 181 Milliarden Euro entstehen würden, nannte Weidel im Interview mit den tagesthemen \"hochgradig unseriös\". Eine aus ihrer Sicht seriöse Summe nannte sie nicht.",
