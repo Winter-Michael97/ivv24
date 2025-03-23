@@ -128,7 +128,7 @@ export default function Q1() {
 
                 <button onClick={handleSubmit} style={buttonStyle}>Weiter</button>
                 <p style={{fontSize: '14px', color: '#FFD700', textAlign: 'left', marginTop: '5px'}}>
-                    * Das Laden der nächsten Seite kann einige Sekunden in Anspruch nehmen.
+                    * Bitte drücken Sie nur 1x auf &#34;Weiter&#34;, das Laden der nächsten Seite kann einige Sekunden in Anspruch nehmen.
                 </p>
             </div>
             <BiasInfoBox/>
