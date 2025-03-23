@@ -82,7 +82,7 @@ export default function EUI() {
             <h2 style={headstyle_2}>Was werden Sie tun?</h2>
             <ul style={{marginBottom: '20px', paddingLeft: '20px'}}>
                 <li style={paragraphstyle}>• Sie werden in einer von drei Gruppen zugewiesen.</li>
-                <li style={paragraphstyle}>• Sie werden fünf verschiedene Texten lesen und diese auf Bias analysieren.
+                <li style={paragraphstyle}>• Sie werden fünf verschiedene Artikel lesen und deren Textabschnitte jeweils auf Bias analysieren.
                 </li>
                 <li style={paragraphstyle}>• Gruppe 1: Bekommt Hinweise eines Onlinetools, um Bias in Texten zu
                     identifizieren.

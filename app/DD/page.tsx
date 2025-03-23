@@ -65,7 +65,7 @@ export default function Home() {
             backgroundColor: '#708090', // Grauer Hintergrund
             color: '#000',           // Weißer Text
             padding: '20px'}}>
-            <h1 style={{ marginBottom: '20px', color: '#fff', fontSize: '20px'}}>Bitte tragen Sie die benötigten Daten ein:</h1>
+            <h1 style={{ marginBottom: '20px', color: '#fff', fontSize: '20px'}}>Bitte tragen Sie als Letztes die benötigten Daten ein:</h1>
             <div className='form flex-direction-column'>
                 <form onSubmit={handleSubmit} style={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
                     <input

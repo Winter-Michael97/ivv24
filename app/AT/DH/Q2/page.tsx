@@ -116,7 +116,7 @@ export default function Q1() {
                 <h1 style={headStyle}>Artikel 2</h1>
                 <h2 style={headstyle_zwei}>Bitte geben Sie an, ob die folgenden Textausschnitte voreingenommen (Bias) sind
                     oder nicht.</h2>
-                <h2 style={headstyle_zwei}>Auf der rechten Seite befindet sich mittig ein Knopf mit einem Pfeil. Wenn Sie ihn drücken, öffnet sich eine Liste mit verschiedenen Bias-Definitionen, die sie scrollen können und die Ihnen bei der Bewertung helfen könnten.</h2>
+                <h2 style={headstyle_zwei}>Auf der rechten Seite befindet sich mittig ein Knopf mit einem Pfeil. Wenn Sie ihn drücken, öffnet sich eine Liste mit verschiedenen Bias-Definitionen, die Sie scrollen können und die Ihnen bei der Bewertung helfen könnten.</h2>
 
                 {/* 🔹 Bias-Selektoren für alle Artikel */}
                 {Object.entries(articleTexts).map(([articleId, text]) => (
