@@ -17,10 +17,10 @@ export default function EUI() {
             localStorage.setItem("UserGroup", userGroup.toString());
 
             // Weiterleitung zur richtigen Gruppe und Frage
-            // Mit Biasscanner
+            // mit Biasscanner
             if (userGroup === 0) {
                 router.push('/AT/BS/Q1'); // Weiterleitung zu BS
-                // Mit Definitionen
+                // mit Definitionen
             } else if (userGroup === 1) {
                 router.push('/AT/DH/Q1'); // Weiterleitung zu DH
                 // Ohne Hilfestellungen
@@ -73,10 +73,7 @@ export default function EUI() {
 
             <h2 style={headstyle_2}>Was ist Bias?</h2>
             <p style={paragraphstyle}>
-                Bias bedeutet Vorurteil oder Verzerrung in einer Quelle oder Darstellung von Informationen. Dies kann in der Art und Weise
-                geschehen, wie Nachrichten präsentiert werden, um eine bestimmte Meinung oder ein bestimmtes Verhalten zu fördern. In dieser
-                Studie werden Sie verschiedene Nachrichtenartikel lesen und dabei erkennen, wie Bias in diesen Artikeln möglicherweise
-                verwendet wird.
+                Bias bedeutet, dass jemand oder etwas in einer Art und Weise voreingenommen oder nicht neutral ist. Wenn eine Nachricht oder ein Text biased (voreingenommen) ist, bedeutet dies, dass sie in einer bestimmten Richtung tendiert oder eine bestimmte Sichtweise bevorzugt, oft ohne die andere Seite fair darzustellen. Ein Beispiel dazu:<br />Stellen Sie sich vor, Sie lesen einen Artikel über ein Fußballspiel. Wenn der Artikel nur die Fehler einer Mannschaft zeigt und dabei die Fehler der anderen Mannschaft ignoriert, ist der Artikel voreingenommen. In dieser Studie werden Sie entscheiden, ob der Textabschnitt, den Sie lesen, biased (voreingenommen) ist oder nicht. Wenn Sie der Meinung sind, dass der Textabschnitt eine bestimmte Meinung bevorzugt oder einseitig ist, dann markieren Sie ihn als biased.
             </p>
 
             <h2 style={headstyle_2}>Was werden Sie tun?</h2>
