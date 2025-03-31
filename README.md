@@ -1,36 +1,43 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# IVV24 – Bias Detection in News Articles
 
-## Getting Started
+This repository contains the code and materials for the short paper project **"Bias Detection in News Articles"**, conducted as part of the IVV 2024 seminar at the University of Regensburg.
 
-First, run the development server:
+## 🧠 Project Description
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+This study investigates individuals’ ability to detect media bias in journalistic texts and evaluates the effectiveness of different support strategies:
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- 🛠️ **BiasScanner-assisted group**
+- 📘 **Definition-based support group**
+- ❌ **Control group (no support)**
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Participants completed classification tasks and their performance was measured across two phases. Key performance metrics included **precision**, **recall**, and **F1-score**.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+The goal was to examine whether tool-based or conceptual support improves bias detection, and whether a learning effect occurs.
 
-## Learn More
+## 📊 Key Findings
 
-To learn more about Next.js, take a look at the following resources:
+- Tool-supported participants performed with high precision during the support phase but showed dependency.
+- The control group outperformed the definition group in Phase 2.
+- A small sample size (N=20) limits generalizability, but trends are evident.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 📁 Contents
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- `data/` – Sample articles and bias types used
+- `results/` – Evaluation metrics and analysis
+- `src/` – Code for experimental platform (React + Neon)
 
-## Deploy on Vercel
+## 📎 Paper
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+You can find the corresponding short paper [here](link-to-pdf-if-you-upload-it-later).
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 🔒 Notes
+
+This repository is public for transparency and demonstration purposes. **Only the repository owner has write access.**  
+Pull requests and forks are welcome for academic interest, but no changes will be merged into the main branch.
+
+## 📫 Contact
+
+For questions regarding this project, feel free to contact:
+
+- Michael Winter – michael1.winterl@stud.uni-regensburg.de  
+- Mark Zänglein – mark.zaenglein@stud.uni-regensburg.de
