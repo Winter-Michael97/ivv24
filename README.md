@@ -21,5 +21,5 @@ The goal was to examine whether tool-based or conceptual support improves bias d
 - A small sample size (N=20) limits generalizability, but trends are evident
 
 ## Paper
-[Paper anzeigen](https://github.com/Winter-Michael97/ivv24/blob/main/IVV24.pdf)
+[Read Paper](https://github.com/Winter-Michael97/ivv24/blob/main/IVV24.pdf)
 
